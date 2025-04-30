@@ -1,0 +1,12 @@
+<div id="publications"></div>
+<script>
+    fetch('publications.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('publications');
+            data.forEach(pub => {
+                const pubItem = `<p><a href="${pub.link}">${pub.title}</a> (${pub.year})</p>`;
+                container.innerHTML += pubItem;
+            });
+        });
+</script>
