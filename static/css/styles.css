@@ -44,43 +44,80 @@ body {
     border-color: #374151;
 }
 
-/* Timeline styles */
+
+/* Timeline styles - without bullets */
 .timeline-item {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 0; /* Removed padding since we no longer have bullets */
 }
 
+/* Remove the bullet */
 .timeline-item:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.5rem;
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    background-color: #4f46e5;
+    display: none; /* This removes the bullet */
 }
 
+/* Remove the vertical line */
 .timeline-item:after {
-    content: "";
-    position: absolute;
-    left: 0.35rem;
-    top: 1.25rem;
-    width: 1px;
-    height: calc(100% - 1rem);
-    background-color: #e5e7eb;
+    display: none; /* This removes the vertical line */
 }
 
-.dark .timeline-item:after {
-    background-color: #4b5563;
-}
-
-.timeline-item:last-child:after {
-    display: none;
+/* Add some spacing between timeline items for better readability */
+.timeline-item {
+    margin-bottom: 1rem;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+
+
+/* Python IDE-inspired styling for headings - improved version */
+.python-heading {
+    font-weight: normal; /* Remove bold */
+    font-family: 'Inter', sans-serif; /* Clean, modern font */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.python-heading .self {
+    color: #E83A50; /* Softer red color similar to Michael Yao's site */
+    font-family: 'SF Mono', 'Roboto Mono', 'Menlo', monospace; /* Monospace font for code feel */
+}
+
+.python-heading .method {
+    color: #1F2937; /* Dark gray that's more elegant */
+    font-family: 'SF Mono', 'Roboto Mono', 'Menlo', monospace; /* Monospace font for code feel */
+}
+
+/* Dark mode support */
+.dark .python-heading .self {
+    color: #F87171; /* Lighter red for dark mode */
+}
+
+.dark .python-heading .method {
+    color: #E5E7EB; /* Light gray for dark mode */
+}
+
+/* Add a hint of spacing between self and method */
+.python-heading .self::after {
+    content: "";
+    margin-right: 2px;
+}
+
+/* Style for the docstring-like descriptions */
+.docstring {
+    color: #059669; /* Green color for docstrings */
+    font-family: 'SF Mono', 'Roboto Mono', 'Menlo', monospace;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Dark mode for docstrings */
+.dark .docstring {
+    color: #34D399; /* Lighter green for dark mode */
 }

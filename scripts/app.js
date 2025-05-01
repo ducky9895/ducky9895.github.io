@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             loadPartial('header-placeholder', 'layouts/partials/header.html'),
             loadPartial('hero-placeholder', 'layouts/partials/hero.html'),
             loadPartial('handles-placeholder', 'layouts/partials/handles.html'),
-            loadPartial('journey-placeholder', 'layouts/partials/journey.html'),
-            loadPartial('research-section-placeholder', 'layouts/partials/research.html'),
+            loadPartial('timeline-placeholder', 'layouts/partials/timeline.html'),
+            loadPartial('changelog-placeholder', 'layouts/partials/changelog.html'),
             loadPartial('impact-placeholder', 'layouts/partials/impact.html'),
             loadPartial('footer-placeholder', 'layouts/partials/footer.html')
         ]);
