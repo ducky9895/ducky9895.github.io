@@ -1,0 +1,28 @@
+{
+    "publications": [
+      {
+        "id": "paper1",
+        "title": "Title of Your Most Recent Paper",
+        "authors": ["Minxuan Duan", "Coauthor One", "Coauthor Two", "Advisor Name"],
+        "venue": "Conference or Journal Name 2025",
+        "year": 2025,
+        "abstract": "Brief abstract of your paper goes here.",
+        "pdf": "link-to-pdf.pdf",
+        "code": "https://github.com/yourusername/project-repo",
+        "bibtex": "@inproceedings{duan2025paper,\n  title={Title of Your Paper},\n  author={Duan, Minxuan and One, Coauthor and Two, Coauthor and Name, Advisor},\n  booktitle={Proceedings of Conference},\n  year={2025}\n}",
+        "tags": ["machine learning", "your research area"]
+      },
+      {
+        "id": "paper2",
+        "title": "Title of Your Second Paper",
+        "authors": ["Minxuan Duan", "Coauthor Three", "Advisor Name"],
+        "venue": "Conference or Journal Name 2024",
+        "year": 2024,
+        "abstract": "Brief abstract of your paper goes here.",
+        "pdf": "link-to-pdf.pdf",
+        "code": "https://github.com/yourusername/project-repo",
+        "bibtex": "@inproceedings{duan2024paper,\n  title={Title of Your Paper},\n  author={Duan, Minxuan and Three, Coauthor and Name, Advisor},\n  booktitle={Proceedings of Conference},\n  year={2024}\n}",
+        "tags": ["deep learning", "your research area"]
+      }
+    ]
+  }

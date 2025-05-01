@@ -5,24 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minxuan Duan - Homepage</title>
     <link rel="icon" href="assets/icons/duck.ico" type="image/x-icon">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#306998',
+                        secondary: '#FFD43B'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+    <!-- Loading overlay style -->
+    <style>
+      #loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s;
+      }
+      .dark #loading-overlay {
+        background-color: #1a202c;
+      }
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #e5e7eb;
+        border-top: 5px solid #306998;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>    
-    <main>
-        <h1>Minxuan Duan</h1>
-        <p>Your introduction goes here...</p>
+<body class="bg-white min-h-screen">
+    <!-- Loading overlay -->
+    <div id="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <header class="w-full">
+        <div id="header-placeholder"></div>
+        
+        <!-- Hero Section -->
+        <div id="hero-placeholder"></div>
+        
+        <!-- Profile Section -->
+        <div id="about" class="container mx-auto px-6 mb-24">
+            <div class="flex flex-col lg:flex-row items-start">
+                <div class="lg:w-3/4 lg:pr-12">
+                    <p class="text-gray-700 mb-4">
+                        I am a PhD candidate advised by <span class="font-semibold">Professor [Advisor Name]</span>.
+                        My research focuses on <span class="font-semibold">[research area]</span> and <span class="font-semibold">[another research area]</span> for machine learning applications.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        I am broadly interested in developing methods that leverage prior knowledge and data to help algorithms better generalize to new distributions. I explore these problems in the setting of [specific application domains].
+                    </p>
+                    <p class="text-gray-700">
+                        I am grateful to be supported by [any fellowships or grants you have received].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <div id="handles-placeholder"></div>
+        <div id="journey-placeholder"></div>
+        <div id="research-section-placeholder"></div>
+        <div id="impact-placeholder"></div>
     </main>
-    <footer>
-        <p>©2025 Minxuan Duan. All Rights Reserved.</p>
-    </footer>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+:where([class^="ri-"])::before { 
+    content: "\f3c2"; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.dark {
+    color-scheme: dark;
+}
+
+.dark body {
+    color: #e5e7eb;
+}
+
+.dark a:not(.text-primary) {
+    color: #e5e7eb;
+}
+
+.dark .text-gray-900 {
+    color: #f9fafb;
+}
+
+.dark .text-gray-700 {
+    color: #d1d5db;
+}
+
+.dark .text-gray-600 {
+    color: #9ca3af;
+}
+
+.dark .text-gray-500 {
+    color: #6b7280;
+}
+
+.dark .bg-gray-50 {
+    background-color: #1f2937;
+}
+
+.dark .border-gray-200 {
+    border-color: #374151;
+}
+
+/* Timeline styles */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #4f46e5;
+}
+
+.timeline-item:after {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 1.25rem;
+    width: 1px;
+    height: calc(100% - 1rem);
+    background-color: #e5e7eb;
+}
+
+.dark .timeline-item:after {
+    background-color: #4b5563;
+}
+
+.timeline-item:last-child:after {
+    display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
