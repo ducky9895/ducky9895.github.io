@@ -77,6 +77,36 @@ function initializeSmoothScroll() {
     });
 }
 
+// Mobile menu functionality
+function initializeMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (!mobileMenuToggle || !mobileMenu) return;
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    });
+    
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+    }
+    
+    // Close mobile menu when clicking a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
 // Load all partials when DOM is ready
 document.addEventListener('DOMContentLoaded', async function() {
     // Load partials
@@ -95,6 +125,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Initialize after partials are loaded
         initializeDarkMode();
         initializeSmoothScroll();
+        initializeMobileMenu(); // Add mobile menu functionality
         
         // Hide loading overlay
         const loadingOverlay = document.getElementById('loading-overlay');
