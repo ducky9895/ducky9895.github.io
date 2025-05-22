@@ -153,17 +153,17 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (isIndexPage) {
             // Load all partials for the index page
             await Promise.all([
-                loadPartial('header-placeholder', '_includes/header.html'),
-                loadPartial('hero-placeholder', '_includes/hero.html'),
-                loadPartial('handles-placeholder', '_includes/handles.html'),
-                loadPartial('timeline-placeholder', '_includes/timeline.html'),
-                loadPartial('changelog-placeholder', '_includes/changelog.html'),
-                loadPartial('impact-placeholder', '_includes/impact.html'),
-                loadPartial('footer-placeholder', '_includes/footer.html')
+                loadPartial('header-placeholder', 'components/header.html'),
+                loadPartial('hero-placeholder', 'components/hero.html'),
+                loadPartial('handles-placeholder', 'components/handles.html'),
+                loadPartial('timeline-placeholder', 'components/timeline.html'),
+                loadPartial('changelog-placeholder', 'components/changelog.html'),
+                loadPartial('impact-placeholder', 'components/impact.html'),
+                loadPartial('footer-placeholder', 'components/footer.html')
             ]);
         } else {
             // For other pages, only load the header
-            await loadPartial('header-placeholder', '_includes/header.html');
+            await loadPartial('header-placeholder', 'components/header.html');
         }
         
         // Initialize after partials are loaded
