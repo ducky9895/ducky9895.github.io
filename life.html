@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Mansalva&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
@@ -41,7 +41,8 @@
                     },
                     fontFamily: {
                         'mansalva': ['Mansalva', 'cursive'],
-                        'montserrat': ['Montserrat', 'sans-serif']
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'caveat': ['Caveat', 'cursive']
                     }
                 }
             }
@@ -52,7 +53,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="bg-white dark:bg-gray-900">
     <!-- Dark mode toggle and Duck icon - positioned outside max-width -->
@@ -72,7 +73,7 @@
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
             <h1 class="font-mansalva text-4xl md:text-5xl mb-2">Ducky's Lobby</h1>
-            <p class="font-montserrat text-base md:text-lg font-light tracking-wider">A collection of moments</p>
+            <p class="font-montserrat text-sm md:text-base font-light tracking-wider">A collection of moments</p>
         </div>
     </section>
 
@@ -651,10 +652,25 @@
                 </div>
             </section>
 
+            <!-- Credits -->
+            <div class="mt-8 mb-4 text-right">
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-montserrat">
+                    Photo credits: Cpt_Wang, 环丙烷, Han Liu, Yang Yang
+                </p>
+            </div>
+
             <!-- Quote -->
-            <blockquote class="mt-12 text-xl italic text-gray-600 dark:text-gray-300 text-center">
-                "Wherever there is light, one can photograph."
-            </blockquote>
+            <div class="mt-20 mb-16 relative">
+                <blockquote class="mt-12 text-2xl md:text-3xl italic text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto leading-relaxed font-caveat">
+                    <span class="text-3xl md:text-4xl text-primary dark:text-secondary font-mansalva leading-none">"</span>
+                    When words become unclear, I shall focus with photographs.<br>
+                    When images become inadequate, I shall be content with silence.
+                    <span class="text-3xl md:text-4xl text-primary dark:text-secondary font-mansalva leading-none">"</span>
+                </blockquote>
+                <div class="mt-6 text-center">
+                    <p class="text-base text-gray-500 dark:text-gray-400 font-montserrat tracking-wider">— Ansel Adams</p>
+                </div>
+            </div>
         </main>
     </div>
 
